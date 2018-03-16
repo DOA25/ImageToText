@@ -24,6 +24,7 @@ public class UploadImage extends AppCompatActivity {
 
     private Button mUploadBtn;
     private ImageView mImageView;
+    private Button button;
     private static final int CAMERA_REQUEST_CODE = 1;
     private StorageReference mStorage;
     private ProgressDialog mProgress;
