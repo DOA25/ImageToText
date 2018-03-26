@@ -1,35 +1,27 @@
 {
   "project_info": {
-    "project_number": "799037203836",
-    "firebase_url": "https://imagetotext-8e4c8.firebaseio.com",
-    "project_id": "imagetotext-8e4c8",
-    "storage_bucket": "imagetotext-8e4c8.appspot.com"
+    "project_number": "736534860065",
+    "firebase_url": "https://quicknote-65be3.firebaseio.com",
+    "project_id": "quicknote-65be3",
+    "storage_bucket": "quicknote-65be3.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:799037203836:android:c678d03fe89342cf",
+        "mobilesdk_app_id": "1:736534860065:android:c678d03fe89342cf",
         "android_client_info": {
           "package_name": "com.example.android.imagetotext"
         }
       },
       "oauth_client": [
         {
-          "client_id": "799037203836-6dapd15397ej0i6qr9t1o6p8v44o6hi2.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.android.imagetotext",
-            "certificate_hash": "099055b149387c2db65011af0b990f7bcfc8cdf3"
-          }
-        },
-        {
-          "client_id": "799037203836-f0m3i4pve1p30nknasmqfcdq0gr9r5bl.apps.googleusercontent.com",
+          "client_id": "736534860065-qed2qibftkf7va441v52ved4m6575hhv.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyASxfwcrU5JgdcuNLRkWduSlP8ripYWKiQ"
+          "current_key": "AIzaSyBMx_jf3xIPVuoXCreP_f6ykI0UEwH5-30"
         }
       ],
       "services": {
@@ -37,13 +29,8 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 2,
-          "other_platform_oauth_client": [
-            {
-              "client_id": "799037203836-f0m3i4pve1p30nknasmqfcdq0gr9r5bl.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "status": 1,
+          "other_platform_oauth_client": []
         },
         "ads_service": {
           "status": 2
