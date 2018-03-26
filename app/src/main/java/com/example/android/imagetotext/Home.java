@@ -1,25 +1,25 @@
 package com.example.android.imagetotext;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
-import java.io.Serializable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 import java.io.File;
-import java.net.URI;
 
 public class Home extends AppCompatActivity implements View.OnClickListener{
 
     private Button createNote;
     private Button MyGroups;
     private Button open;
+    private Button signOut;
     private File dir;
     private FileSystem files;
     public static Home instance = null;
+    private FirebaseAuth firebaseAuth;
 
 
 
@@ -31,11 +31,14 @@ public class Home extends AppCompatActivity implements View.OnClickListener{
         instance = this;
         MyGroups = (Button) findViewById(R.id.MyGroups);
         createNote = (Button) findViewById(R.id.MyDocuments);
+        signOut = (Button) findViewById(R.id.SignOut);
         files = new FileSystem(Home.instance.getExternalFilesDir(null) + "/Documents/");
         open = (Button) findViewById(R.id.openDoc);
         MyGroups.setOnClickListener(this);
         createNote.setOnClickListener(this);
+        signOut.setOnClickListener(this);
         open.setOnClickListener(this);
+        firebaseAuth = FirebaseAuth.getInstance();
     }
 
 
@@ -55,6 +58,12 @@ public class Home extends AppCompatActivity implements View.OnClickListener{
         {
 
             startActivity(new Intent(this, openDocument.class).putExtra("fSystem", files));
+        }
+        else if (v == signOut)
+        {
+            FirebaseAuth.getInstance().signOut();
+            finish();
+            startActivity(new Intent(this, Login.class));
         }
     }
 }

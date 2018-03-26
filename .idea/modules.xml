@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ImageToText.iml" filepath="$PROJECT_DIR$/ImageToText.iml" />
+      <module fileurl="file://C:\Users\Chris\AndroidStudioProjects\QuicNote\ImageToText.iml" filepath="C:\Users\Chris\AndroidStudioProjects\QuicNote\ImageToText.iml" />
+      <module fileurl="file://$PROJECT_DIR$/QuicNote.iml" filepath="$PROJECT_DIR$/QuicNote.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\Chris\AndroidStudioProjects\QuicNote\app\app.iml" filepath="C:\Users\Chris\AndroidStudioProjects\QuicNote\app\app.iml" />
     </modules>
   </component>
 </project>
