@@ -32,10 +32,17 @@ public class textEditor extends AppCompatActivity {
         toolbar = (RTextEditorToolbar) findViewById(R.id.editor_toolbar);
         toolbar.setEditorView(edit);
 
+
+
+
         if(getIntent().getExtras().getString("result") != null)
         {
-            final String result = getIntent().getExtras().getString("result").replaceAll("\\r\\n|\\r|\\n", "").trim();
-            edit.setHtml("<p>"+ result +"</p>");
+            final String [] result = getIntent().getExtras().getString("result").trim().split("\\r\\n|\\r|\\n");
+
+            for(int i = 0; i < result.length; i++) {
+                edit.insertText(result[i]);
+            }
+
         }
     }
 
