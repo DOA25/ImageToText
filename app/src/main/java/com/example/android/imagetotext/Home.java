@@ -45,18 +45,15 @@ public class Home extends AppCompatActivity implements View.OnClickListener{
     @Override
     public void onClick(View v) {
         if(v==MyGroups) {
-            finish();
             startActivity(new Intent(this, MyGroups.class));
         }
         else if (v==createNote) {
-            finish();
             Intent i = new Intent(this, createNote.class);
             i.putExtra("fSystem", files);
             startActivity(i);
         }
         else if (v== open)
         {
-
             startActivity(new Intent(this, openDocument.class).putExtra("fSystem", files));
         }
         else if (v == signOut)

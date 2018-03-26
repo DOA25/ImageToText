@@ -17,7 +17,6 @@ public class MyDocuments extends AppCompatActivity implements View.OnClickListen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_groups);
 
-        Home = (Button) findViewById(R.id.Home);
         MyGroups = (Button) findViewById(R.id.MyDocuments);
         UploadImage = (Button) findViewById(R.id.UploadImage);
 
@@ -28,14 +27,9 @@ public class MyDocuments extends AppCompatActivity implements View.OnClickListen
 
     @Override
     public void onClick(View v) {
-        if(v==Home){
-            finish();
-            startActivity(new Intent(this, Home.class));
-        }else if(v == MyGroups){
-            finish();
+        if(v == MyGroups){
             startActivity(new Intent(this, MyGroups.class));
         }else if(v == UploadImage){
-            finish();
             startActivity(new Intent(this, UploadImage.class));
         }
     }

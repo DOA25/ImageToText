@@ -94,7 +94,6 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
         if(view == buttonLogin){
             userLogin();
         }else if(view == buttonRegister){
-            finish();
             startActivity(new Intent(this, SignUp.class));
         }
     }

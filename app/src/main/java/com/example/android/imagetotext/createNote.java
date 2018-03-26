@@ -86,6 +86,7 @@ public class createNote extends AppCompatActivity implements View.OnClickListene
         }
     }
 
+
     public void createBlank()
     {
 
