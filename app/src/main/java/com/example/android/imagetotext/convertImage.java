@@ -118,7 +118,7 @@ public class convertImage extends AppCompatActivity {
                 {
                     TextBlock myItems = items.valueAt(i);
                     sb.append(myItems.getValue());
-                    sb.append("\n");
+                    sb.append(" ");
                 }
                 return sb.toString();
 
