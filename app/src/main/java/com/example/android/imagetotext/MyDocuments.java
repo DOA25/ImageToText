@@ -8,7 +8,6 @@ import android.widget.Button;
 
 public class MyDocuments extends AppCompatActivity implements View.OnClickListener{
 
-    private Button Home;
     private Button MyGroups;
     private Button UploadImage;
 
@@ -20,7 +19,6 @@ public class MyDocuments extends AppCompatActivity implements View.OnClickListen
         MyGroups = (Button) findViewById(R.id.MyDocuments);
         UploadImage = (Button) findViewById(R.id.UploadImage);
 
-        Home.setOnClickListener(this);
         MyGroups.setOnClickListener(this);
         UploadImage.setOnClickListener(this);
     }

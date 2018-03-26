@@ -10,6 +10,9 @@ public class MyGroups extends AppCompatActivity implements View.OnClickListener{
 
     private Button MyDocuments;
     private Button UploadImage;
+    private Button CreateGroup;
+    private Button ChooseGroup;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,9 +21,13 @@ public class MyGroups extends AppCompatActivity implements View.OnClickListener{
 
         MyDocuments = (Button) findViewById(R.id.MyDocuments);
         UploadImage = (Button) findViewById(R.id.UploadImage);
+        CreateGroup = (Button) findViewById(R.id.CreateGroup);
+        ChooseGroup = (Button) findViewById(R.id.ChooseGroup);
 
         MyDocuments.setOnClickListener(this);
         UploadImage.setOnClickListener(this);
+        CreateGroup.setOnClickListener(this);
+        ChooseGroup.setOnClickListener(this);
     }
 
     @Override
@@ -29,6 +36,12 @@ public class MyGroups extends AppCompatActivity implements View.OnClickListener{
             startActivity(new Intent(this, MyDocuments.class));
         }else if(v == UploadImage){
             startActivity(new Intent(this, UploadImage.class));
+        }
+        else if(v == CreateGroup){
+            startActivity(new Intent(this, NewGroup.class));
+        }
+        else if(v == ChooseGroup){
+            startActivity(new Intent(this, ChooseGroup.class));
         }
     }
 }

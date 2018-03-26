@@ -58,7 +58,7 @@ public class Home extends AppCompatActivity implements View.OnClickListener{
         }
         else if (v == signOut)
         {
-            FirebaseAuth.getInstance().signOut();
+            firebaseAuth.signOut();
             finish();
             startActivity(new Intent(this, Login.class));
         }

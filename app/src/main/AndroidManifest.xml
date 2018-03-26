@@ -43,6 +43,10 @@
             android:parentActivityName=".Home"
             />
         <activity
+            android:name=".NewGroup"
+            android:parentActivityName=".MyGroups"
+            />
+        <activity
             android:name=".UploadImage"
             android:label="@string/title_activity_upload_image"
             android:theme="@style/AppTheme.NoActionBar"
@@ -60,6 +64,10 @@
             />
         <activity
             android:name=".convertImage"
+            android:parentActivityName=".Home"
+            />
+        <activity
+            android:name=".ChooseGroup"
             android:parentActivityName=".Home"
             />
         <activity

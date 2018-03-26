@@ -36,10 +36,6 @@ public class SignUp extends AppCompatActivity  implements View.OnClickListener {
 
 
         firebaseAuth = FirebaseAuth.getInstance();
-        if(firebaseAuth.getCurrentUser() != null){
-            finish();
-            startActivity(new Intent(getApplicationContext(), Home.class));
-        }
         progressDialog = new ProgressDialog(this);
         buttonRegister = (Button) findViewById(R.id.buttonRegister);
         editTextPassword = (EditText) findViewById(R.id.editPassword);
@@ -78,6 +74,7 @@ public class SignUp extends AppCompatActivity  implements View.OnClickListener {
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
+
                         if(task.isSuccessful()){
                             finish();
                             startActivity(new Intent(getApplicationContext(), Login.class));
