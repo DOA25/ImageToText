@@ -1,41 +1,60 @@
 package com.example.android.imagetotext;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
+import java.io.Serializable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import java.io.File;
+import java.net.URI;
+
 public class Home extends AppCompatActivity implements View.OnClickListener{
 
-    private Button MyDocuments;
-    private Button UploadImage;
+    private Button createNote;
     private Button MyGroups;
+    private Button open;
+    private File dir;
+    private FileSystem files;
+    public static Home instance = null;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
 
+        setContentView(R.layout.activity_home);
+        instance = this;
         MyGroups = (Button) findViewById(R.id.MyGroups);
-        UploadImage = (Button) findViewById(R.id.UploadImage);
-        MyDocuments = (Button) findViewById(R.id.MyDocuments);
+        createNote = (Button) findViewById(R.id.MyDocuments);
+        files = new FileSystem(Home.instance.getExternalFilesDir(null) + "/Documents/");
+        open = (Button) findViewById(R.id.openDoc);
         MyGroups.setOnClickListener(this);
-        UploadImage.setOnClickListener(this);
-        MyDocuments.setOnClickListener(this);
+        createNote.setOnClickListener(this);
+        open.setOnClickListener(this);
     }
+
 
     @Override
     public void onClick(View v) {
-        if(v==MyGroups){
+        if(v==MyGroups) {
             finish();
             startActivity(new Intent(this, MyGroups.class));
-        }else if (v == UploadImage){
+        }
+        else if (v==createNote) {
             finish();
-            startActivity(new Intent(this, UploadImage.class));
-        }else if (v==MyDocuments){
-            finish();
-            startActivity(new Intent(this, MyDocuments.class));
+            Intent i = new Intent(this, createNote.class);
+            i.putExtra("fSystem", files);
+            startActivity(i);
+        }
+        else if (v== open)
+        {
+
+            startActivity(new Intent(this, openDocument.class).putExtra("fSystem", files));
         }
     }
 }

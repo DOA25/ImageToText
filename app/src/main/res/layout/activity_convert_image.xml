@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.imagetotext.convertImage">
+
+
+    <ImageView
+        android:id="@+id/ImageView"
+        android:layout_width="700px"
+        android:layout_height="700px"
+
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="300px"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="400dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="417dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/uploadeImg"
+                android:layout_width="223dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="getImage"
+                android:text="Upload Image" />
+
+            <Button
+                android:id="@+id/captureImg"
+                android:layout_width="225dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="useCamera"
+                android:text="capture_image"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="168dp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/conImg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="convert_image" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

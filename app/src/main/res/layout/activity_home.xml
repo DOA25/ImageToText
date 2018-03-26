@@ -11,38 +11,34 @@
     tools:context="com.example.android.imagetotext.Home">
 
 
-
     <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_alignParentBottom="true">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <Button
-            android:layout_width="wrap_content"
+            android:id="@+id/openDoc"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="My Groups"
-            android:id="@+id/MyGroups"
-            />
+            android:text="Open Documents" />
+        <Button
+                android:id="@+id/MyDocuments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Create note" />
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Sign Out"
+                android:id="@+id/MyGroups"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="My Groups" />
+
+        <Button
             android:id="@+id/SignOut"
-            />
-
-        <Button
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="My Documents"
-            android:id="@+id/MyDocuments"/>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Upload Image"
-            android:id="@+id/UploadImage"/>
-
+            android:text="Sign Out" />
     </LinearLayout>
+
+
 </RelativeLayout>
