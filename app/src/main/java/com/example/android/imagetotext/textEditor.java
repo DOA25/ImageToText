@@ -44,6 +44,12 @@ public class textEditor extends AppCompatActivity {
             }
 
         }
+
+        if(getIntent().getExtras().getString("htmlFile") != null)
+        {
+            final String html = getIntent().getExtras().getString("htmlFile");
+            edit.setHtml(html);
+        }
     }
 
     public void saveFile(View v)

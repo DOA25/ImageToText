@@ -73,7 +73,7 @@ public class FileSystem implements Serializable{
 		try{
 			byte data[] = msg.getBytes();
 			File fSave = new File(dir, fileName+".txt");
-			FileWriter write = new FileWriter(fSave);
+			FileWriter write = new FileWriter(fSave.getAbsoluteFile());
 			write.append(msg);
 			write.flush();
 			write.close();
@@ -102,15 +102,12 @@ public class FileSystem implements Serializable{
 	public boolean RemoveFile(File FileName) {
 		if(!FileName.exists())
 		{return false;}
-		else{FileName.delete();
+		else{
+			FileName.delete();
 		return true;
 		}
 	}
 
 
-	public void getFile(File file) {
-
-		throw new UnsupportedOperationException();
-	}
 
 }

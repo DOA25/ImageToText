@@ -9,13 +9,15 @@
     <LinearLayout
         android:id="@+id/linearLayout4"
         android:layout_width="256dp"
-        android:layout_height="110dp"
-        android:layout_marginTop="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="173dp"
+        android:layout_marginTop="228dp"
         android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/spinner">
 
         <Button
             android:id="@+id/openFile"
@@ -28,8 +30,20 @@
             android:id="@+id/deleteFile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="deleteFile"
             android:text="Delete" />
 
     </LinearLayout>
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="368dp"
+        android:layout_height="58dp"
+        android:layout_marginBottom="95dp"
+        android:layout_marginTop="300dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
