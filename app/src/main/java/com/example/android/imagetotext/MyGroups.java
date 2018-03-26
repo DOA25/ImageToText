@@ -8,35 +8,40 @@ import android.widget.Button;
 
 public class MyGroups extends AppCompatActivity implements View.OnClickListener{
 
-    private Button Home;
     private Button MyDocuments;
     private Button UploadImage;
+    private Button CreateGroup;
+    private Button ChooseGroup;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_groups);
 
-        Home = (Button) findViewById(R.id.Home);
         MyDocuments = (Button) findViewById(R.id.MyDocuments);
         UploadImage = (Button) findViewById(R.id.UploadImage);
+        CreateGroup = (Button) findViewById(R.id.CreateGroup);
+        ChooseGroup = (Button) findViewById(R.id.ChooseGroup);
 
-        Home.setOnClickListener(this);
         MyDocuments.setOnClickListener(this);
         UploadImage.setOnClickListener(this);
+        CreateGroup.setOnClickListener(this);
+        ChooseGroup.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-        if(v==Home){
-            finish();
-            startActivity(new Intent(this, Home.class));
-        }else if(v == MyDocuments){
-            finish();
+        if(v == MyDocuments){
             startActivity(new Intent(this, MyDocuments.class));
         }else if(v == UploadImage){
-            finish();
             startActivity(new Intent(this, UploadImage.class));
+        }
+        else if(v == CreateGroup){
+            startActivity(new Intent(this, NewGroup.class));
+        }
+        else if(v == ChooseGroup){
+            startActivity(new Intent(this, ChooseGroup.class));
         }
     }
 }

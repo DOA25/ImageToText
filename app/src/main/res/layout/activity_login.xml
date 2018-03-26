@@ -10,7 +10,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.android.imagetotext.Login">
 
-````<LinearLayout
+    <LinearLayout
     android:layout_centerHorizontal="true"
     android:layout_centerVertical="true"
     android:orientation="vertical"
@@ -21,7 +21,7 @@
         android:layout_margin="15dp"
         android:inputType="textEmailAddress"
         android:hint="Enter your email"
-        android:id="@+id/editTextEmail"
+        android:id="@+id/enterTextEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
@@ -29,22 +29,22 @@
         android:layout_margin="15dp"
         android:inputType="textPassword"
         android:hint="Enter your password"
-        android:id="@+id/editTextPassword"
+        android:id="@+id/enterTextPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <Button
         android:layout_margin="15dp"
-        android:id="@+id/buttonRegister"
-        android:text="Register User"
+        android:id="@+id/buttonLogin"
+        android:text="Login"
         android:layout_width="wrap_content"
         android:layout_height="match_parent" />
 
     <Button
         android:layout_margin="15dp"
         android:textAlignment="center"
-        android:text="Already Registered? Sign in here"
-        android:id="@+id/textViewSignIn"
+        android:text="Not Registered? Sign up here"
+        android:id="@+id/buttonRegister"
         android:layout_width="wrap_content"
         android:layout_height="match_parent" />
 

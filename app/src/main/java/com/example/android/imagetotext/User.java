@@ -8,10 +8,18 @@ public class User {
 	private String name;
 	private ArrayList<String> commentsMadeIDs;
 	private FileSystem Files;
-	/*private ArrayList<ShareGroup> groupsJoined;
+	private ArrayList<String> groupsJoined;
 
 	public String getUserName() {
 		return this.userName;
+	}
+
+	public ArrayList<String> getGroupsJoined(){
+		return groupsJoined;
+	}
+
+	public void setGroupsJoined(ArrayList<String> groups){
+		this.groupsJoined = groups;
 	}
 
 	/**
@@ -77,5 +85,7 @@ public class User {
 		// TODO - implement User.convertToPDF
 		throw new UnsupportedOperationException();
 	}*/
+
+
 
 }
