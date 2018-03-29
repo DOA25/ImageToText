@@ -24,12 +24,18 @@ public class FileSystem implements Serializable{
 		if(!this.dir.exists())
 		{this.dir.mkdir();}
 		else {
-			File[] allFiles = this.dir.listFiles();
-			for (int i = 0; i < allFiles.length; i++) {
-				Files.add(allFiles[i].getAbsoluteFile());
-			}
+			refresh();
 		}
 
+	}
+
+	public void refresh()
+	{
+		Files = new ArrayList<>();
+		File[] allFiles = this.dir.listFiles();
+		for (int i = 0; i < allFiles.length; i++) {
+			Files.add(allFiles[i].getAbsoluteFile());
+		}
 	}
 
 
@@ -94,7 +100,7 @@ public class FileSystem implements Serializable{
 
 
 	public boolean addFile(File FileName) {
-		Files.add(FileName);
+		refresh();
 		return true;
 	}
 
